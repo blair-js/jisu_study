@@ -180,7 +180,6 @@ public class OperatorPractice {
 		//인센티브 포함 급여가 3000만원 이상이면 “3000 이상”, 미만이면 “3000 미만”을 출력하세요.
 		//(A 사원의 인센티브는 0.4, B 사원의 인센티브는 없으며, C 사원의 인센티브는 0.15)
 		
-		
 		System.out.print("A 사원의 연봉 : ");
 		double aSal = sc.nextInt() * 1.4;
 		
@@ -201,8 +200,6 @@ public class OperatorPractice {
 		
 		System.out.println("C사원의 인센티브포함 연봉 : " + cSal);
 		System.out.println(cSal >= 3000 ? s1 : s2);
-
-		
 		
 	}
 	
