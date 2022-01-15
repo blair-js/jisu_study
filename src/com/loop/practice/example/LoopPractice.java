@@ -126,7 +126,7 @@ public class LoopPractice {
 		System.out.print("정수 2 : ");
 		int num2 = sc.nextInt();
 		
-		if(num1 < 1 || num2 < 1) {
+		if(num1 < 1 || num2 < 1) { 
 			System.out.println("1 이상의 숫자만을 입력해주세요.");
 		}else {
 			int min = num1; 
@@ -194,11 +194,28 @@ public class LoopPractice {
 		}
 	}
 
-	public void practice9() {
+	public void practice9() { //틀림 -> 다시 풀기 완료
 		
 		//사용자로부터 입력 받은 숫자의 단부터 9단까지 출력하세요.
 		//단, 2~9 사이의 숫자가 아닌 경우 “2~9 사이의 숫자만 입력해주세요”를 출력하세요.
 		
+		System.out.print("숫자 : ");
+		int dan = sc.nextInt(); 
+		
+		if(dan >= 2 && dan <= 9) {
+			for(int i=dan; i<=9; i++) {
+				System.out.println("===== " + i + "단 =====");
+				for(int j=1; j<=9; j++) {
+					int res = dan * j; 
+					System.out.printf("%d * %d = %d\n", i, j, res);
+				}//for
+			}//for	
+		}else {
+			System.out.println("2~9 사이의 숫자만 입력해주세요.");
+		}
+		
+		
+		/*
 		System.out.print("숫자 : ");
 		int dan = sc.nextInt();
 		
@@ -214,7 +231,7 @@ public class LoopPractice {
 			}
 			System.out.println();
 		}
-		
+		*/
 		
 	}
 
@@ -265,7 +282,7 @@ public class LoopPractice {
 		}
 	}
 
-	public void practice12() {
+	public void practice12() { //틀림
 		
 		/*
 		정수 두 개와 연산자(문자열로 입력 받고 입력된 연산자에 따라 알맞은 결과를 출력하세요.)
@@ -278,6 +295,23 @@ public class LoopPractice {
 		없는 연산자가 들어올 시 “없는 연산자입니다. 다시 입력해주세요.”라고 출력하고
 		두 경우 모두 처음으로 돌아가 사용자가 다시 연산자부터 입력하도록 하세요.*/
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*
 		String op = ""; //연산자 받을 변수 
 		
 		for (; !op.equals("exit") ;) {//exit가 아닐경우 무한반복 -> exit일 경우 해당 for문에 진입할 수 없으며 330행의 코드 실행
@@ -328,8 +362,10 @@ public class LoopPractice {
 			}//if
 		}//for
 		
-		System.out.println("프로그램을 종료합니다.");
-	}	
+		System.out.println("프로그램을 종료합니다.");*/
+		
 	
+	}
+
 }
 
