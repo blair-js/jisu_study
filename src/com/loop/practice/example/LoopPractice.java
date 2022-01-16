@@ -295,74 +295,51 @@ public class LoopPractice {
 		없는 연산자가 들어올 시 “없는 연산자입니다. 다시 입력해주세요.”라고 출력하고
 		두 경우 모두 처음으로 돌아가 사용자가 다시 연산자부터 입력하도록 하세요.*/
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		/*
-		String op = ""; //연산자 받을 변수 
-		
-		for (; !op.equals("exit") ;) {//exit가 아닐경우 무한반복 -> exit일 경우 해당 for문에 진입할 수 없으며 330행의 코드 실행
-
-			System.out.print("연산자(+,-,*,/,%) : ");
-			op = sc.nextLine();
+		while(true) {
 			
-			if (!op.equals("exit")) {
-				
+			System.out.print("연산자(+, -, *, /, %) : ");
+			String op = sc.nextLine();
+			if(op.equals("exit")){
+				System.out.println("프로그램을 종료합니다.");
+				return;
+			}else {
 				System.out.print("정수1 : ");
 				int num1 = sc.nextInt();
-	
 				System.out.print("정수2 : ");
 				int num2 = sc.nextInt();
+				sc.nextLine();
 				
-				sc.nextLine(); //무한반복시 위의 nextInt()에서 남은 엔터 제거 
-
-			
-			int res = 0; //결과 담는 변수 
-			switch (op) {
-			case "+":
-				res = num1 + num2; 
-				break;
-			case "-":
-				res = num1 - num2; 
-				break;
-			case "*":
-				res = num1 * num2; 
-				break;
-			case "%":
-				res = num1 % num2; 
-				break;
-			case "/":
-				if(num2 == 0) {
-					System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
-					continue; //예전과제 때 누락. 그럼 밑의 326행이 실행되기 때문에 잘못된 코드. continue 추가해 줬다. 
+				int result = 0;
+				if((op.equals("/") || op.equals("%")) && num2 == 0) { //연산자가 /이거나 %이고 num2가 0 일때 
+						System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");
+						continue;
 				}else {
-					res = num1 / num2; 
-				}
-				break;	
-			default:
-				System.out.println("없는 연산자 입니다.");
-				continue; //예전과제 때 break으로 사용 했었음 -> 그럼 밑의 326행이 실행되기 때문에 잘못된 코드. continue로 바꾸어 줬다. 
-			}//switch
-
-			System.out.printf("%d %s %d = %d\n" , num1, op, num2, res);
-			
-			}//if
-		}//for
+					
+					switch(op) {
+					case "+":
+						result = num1 + num2;
+						break;
+					case "-":
+						result = num1 - num2;
+						break;
+					case "*":
+						result = num1 * num2;
+						break;
+					case "/":
+						result = num1 / num2;
+						break;
+					case "%":
+						result = num1 % num2;
+						break;
+					default :
+						System.out.println("없는 연산자 입니다. 다시 입력해주세요.");
+						continue;
+					}//switch
+					System.out.printf("%d %s %d = %d\n", num1, op, num2, result);
+				}//if-else
+			}//if-else
+		}//while
 		
-		System.out.println("프로그램을 종료합니다.");*/
 		
 	
 	}

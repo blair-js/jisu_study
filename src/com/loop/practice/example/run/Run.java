@@ -15,10 +15,10 @@ public class Run {
 		//lp.practice6();
 		//lp.practice7();
 		//lp.practice8();
-		lp.practice9();
+		//lp.practice9();
 		//lp.practice10();
 		//lp.practice11();
-		//lp.practice12();
+		lp.practice12();
 		
 		/*int sum = 0; //마지막 숫자 전까지의 합계
 		for(int i=1; i<=10; i++) { //10번 반복 
