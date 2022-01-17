@@ -219,7 +219,7 @@ public class ArrayPractice {
 		}//if
 	
 	}
-
+ 
 	public void practice10() {
 		
 		//10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
@@ -271,26 +271,26 @@ public class ArrayPractice {
 	
 	}
 
-	public void practice12() { //다시 풀기
+	public void practice12() { 
 		
 		//10개의 값을 저장할 수 있는 정수형 배열을 선언 및 할당하고
 		//1~10 사이의 난수를 발생시켜 "중복된 값이 없게" 배열에 초기화한 후 출력하세요.
 		
 		int[] arr = new int[10];
 		
-		int i;
-		for(i=0; i<arr.length; i++) { //비교 주체
-			for(int j=0; j<i; j++) { //비교 대상 
-				int ran = (int)(Math.random() *10 +1);
-				if(arr[i] == arr[j]) { //비교 주체와 비교 대상이 같다면, 다시 반복
-					i--;
-					continue; 
-				}else {
-					arr[i] = ran;
+		
+		for(int i=0; i<arr.length; i++) { //현재 대상 
+			int random = (int)(Math.random()*10 +1);
+			arr[i] = random;
+			for(int j=0; j<i; j++) { //비교 대상(0부터 현재 대상(i)전까지 검사 
+				if(arr[i] == arr[j]) { //같으면 
+					i--; //i 줄여주기 => 왜냐? 다시 랜덤값을 받아서 해당 i에 값을 초기화 해주어야 하니까 -> 284행에서 계속 초기화 될 것임
+					break; //가장 가까운 반복문 탈출(안쪽 for 탈출) => 어짜피 중복을 발견했으면 안쪽 반복을 계속할 필요는 없음
 				}
-			}//안쪽 for
-		}//바깥 for
-		for(i=0; i<arr.length; i++) {
+			}//안쪽for
+		}//바깥쪽 for
+		
+		for(int i=0; i<arr.length; i++) {
 			System.out.print(arr[i] + " ");
 		}
 		
@@ -301,7 +301,57 @@ public class ArrayPractice {
 		//주민등록번호를 String 문자열로 입력 받고 입력 받은 그 문자열을 각 인덱스 별 문자를
 		//char[]에 옮겨 담기 (단, 성별 자리 이후부터는 *로 담기)
 		
+		System.out.print("주민등록번호(-포함) : ");
+		String regNo = sc.nextLine();
+		
+		char[] arr = new char[regNo.length()];
+		
+		for(int i=0; i<arr.length; i++) {
+			if(i < 8) {
+				arr[i] = regNo.charAt(i);
+			}else {
+				arr[i] = '*';
+			}
+			System.out.print(arr[i]);
+		}//for
+		
+		
 	}
+
+	public void practice14() {
+		
+		//로또 번호 자동 생성기 프로그램을 작성하는데 "중복 값 없이" 오름차순으로 정렬하여 출력하세요.
+		
+		int[] lotto = new int[6];
+		
+		for(int i=0; i<lotto.length; i++) {
+			int ran = (int)(Math.random() *45 + 1);
+			lotto[i] = ran;
+			for(int j=0; j<i; j++) {
+				if(lotto[i] == lotto[j]) {
+					i--;
+					break;
+				}
+			}//안쪽 for
+		}//바깥쪽 for
+		
+		//오름차순 정렬 
+		for(int i=1; i<lotto.length; i++) { //현재 대상 인덱스 (1부터 시작)
+			for(int j=0; j<i; j++) { //비교 대상들 인덱스 (0부터 시작) 1 vs 0 => 2 vs 0, 2 vs 1 ...
+				if(lotto[i] < lotto[j]) {
+					int tmp = lotto[i];
+					lotto[i] = lotto[j];
+					lotto[j] = tmp;
+				}
+			}//안쪽 for
+		}//바깥 for
+		
+		for(int i=0; i<lotto.length; i++) { //출력
+			System.out.print(lotto[i] + " ");
+		}
+		
+	}
+
 }
 
 
