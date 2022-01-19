@@ -24,7 +24,6 @@ public class Array2Practice {
 			 System.out.println();//한 행 끝나면 개행
 		 }
 		 
-		 
 	 }
 	
 	 public void practice2() {
@@ -40,7 +39,7 @@ public class Array2Practice {
 		 for(int i=0; i<arr.length; i++) { //행
 			 for(int j=0; j<arr[i].length; j++) { //열(해당 행의 요소 개수만큼 반복)
 				 arr[i][j] = num--; 
-				 System.out.printf("%2d " , arr[i][j]); //2자릿수로 출력
+				 System.out.printf("%2d ", arr[i][j]); //2자릿수로 출력
 			 }
 			 System.out.println();//한 행 끝나면 개행
 		 }
@@ -69,38 +68,13 @@ public class Array2Practice {
 		 //0행 0열부터 2행 2열까지는 1~10까지의 임의의 정수 값 저장 후
 		 //아래의 내용처럼 처리하세요.
 		 
-		 int[][] arr = new int[4][4];
-		 
-		 for(int i=0; i<arr.length; i++) { //2행 2열 값 넣기 
-			 int rowSum = 0; //행마다 합계는 초기화 되어야 하므로 행 반복문 안에 넣는다. 
-			 if(i < 3) { //0~2행
-				 for(int j=0; j<arr[i].length; j++) {
-					 if(j < 3) { //0~2열
-						 arr[i][j] = (int)(Math.random()*10 +1);
-						 rowSum += arr[i][j];
-					 }else { //3열만
-						 arr[i][j] = rowSum;
-					 }
-				 }//for
-			 }else { //3행만
-				
-				 
-				 
-				 
-			 }//if-else
-		 }//for 
-		 
-		 //확인
-		 for(int i=0; i<arr.length; i++) {
-			 System.out.println(Arrays.toString(arr[i]) + " ");
-		 }
-		 
-		 
+
 	 }
 
 	 public void practice5() {
 		 
-		 //2차원 배열의 행과 열의 크기를 사용자에게 직접 입력 받되, 1~10사이 숫자가 아니면
+		 //2차원 배열의 행과 열의 크기를 사용자에게 직접 입력 받되, 
+		 //1~10사이 숫자가 아니면
 		 //“반드시 1~10 사이의 정수를 입력해야 합니다.” 출력 후 다시 정수를 받게 하세요.
 		 //크기가 정해진 이차원 배열 안에는 영어 대문자가 랜덤으로 들어가게 한 뒤 출력하세요.
 		 //(char형은 숫자를 더해서 문자를 표현할 수 있고 65는 A를 나타내고 90은 Z를 나타냄)
@@ -121,19 +95,23 @@ public class Array2Practice {
 			 
 			 for(int i=0; i<arr.length; i++) {
 				 for(int j=0; j<arr[i].length; j++) {
-					 arr[i][j] = (char)(int)(Math.random() * 26 + 65);
+					 arr[i][j] = (char)(Math.random() * 26 + 65); //0이상 26미만 => 65이상 91미만(90이하)
 					 System.out.print(arr[i][j] + " ");
 				 }
 				 System.out.println();
 			 }
-			 break;
+			 break; 
 		 }//while
 	 }
 
 	 public void practice6() {
 		 
-		 String[][] strArr = new String[][] {{"이", "까", "왔", "앞", "힘"}, {"차", "지", "습", "으", "냅"}, {"원", 
-			 "열", "니", "로", "시"}, {"배", "심", "다", "좀", "다"}, {"열", "히", "! ", "더", "!! "}};
+		 String[][] strArr = new String[][] {
+			 {"이", "까", "왔", "앞", "힘"}, 
+			 {"차", "지", "습", "으", "냅"}, 
+			 {"원", "열", "니", "로", "시"}, 
+			 {"배", "심", "다", "좀", "다"}, 
+			 {"열", "히", "! ", "더", "!! "}};
 			 
 		 for(int i=0; i<strArr.length; i++) {
 			 for(int j=0; j<strArr[i].length; j++) {
@@ -146,7 +124,7 @@ public class Array2Practice {
 
 	 public void practice7() {
 		 
-		 //사용자에게 행의 크기를 입력 받고 그 수만큼의 반복을 통해 각각 해당 행의 크기도 받아
+		 //사용자에게 행의 크기를 입력 받고 그 수만큼의 반복을 통해 각각 해당 행의 크기도 받아(열을 입력받아라)
 		 //문자형 가변 배열을 선언 및 할당하세요.
 		 //그리고 각 인덱스에 ‘a’부터 총 인덱스의 개수만큼 하나씩 늘려 저장하고 출력하세요.
 
@@ -159,7 +137,9 @@ public class Array2Practice {
 			 System.out.print(i + "행의 크기 : ");
 			 arr[i] = new char[sc.nextInt()];
 		 }
-		 char ch = 'a';
+		 
+		 char ch = 'a'; //초기화 값 
+		 
 		 for(int i=0; i<arr.length; i++) {
 			 for(int j=0; j<arr[i].length; j++) {
 				 arr[i][j] = ch++;
@@ -169,7 +149,7 @@ public class Array2Practice {
 		 }
 	 }
 
-	 public void practice8() { //다시 
+	 public void practice8() {  
 		 
 		 //1차원 배열에 12명의 학생들을 출석부 순으로 초기화 하고
 		 //3행 2열로 2차원 배열 2개를 이용하여 분단을 나눠서 저장.
@@ -177,6 +157,34 @@ public class Array2Practice {
 		 //<출석부>
 		 //1. 강건강 2. 남나나 3. 도대담 4. 류라라 5. 문미미 6. 박보배
 		 //7. 송성실 8. 윤예의 9. 진재주 10. 차천축 11. 피풍표 12. 홍하하
+		 
+		 String[] attn = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피퐁표", "홍하하"};
+		 
+		 String[][] one = new String[3][2];
+		 String[][] two = new String[3][2];
+		 
+		 int idx1 = 0; //1차원배열의 인덱스
+		 
+		 System.out.println("== 1분단 == ");
+		 for(int i=0; i<one.length; i++) {
+			 for(int j=0; j<one[i].length; j++) {
+				 one[i][j] = attn[idx1++];
+				 System.out.print(one[i][j] + " ");
+			 }
+			 System.out.println();
+		 }
+		 System.out.println("== 2분단 == ");
+		 for(int i=0; i<two.length; i++) {
+			 for(int j=0; j<two[i].length; j++) {
+				 two[i][j] = attn[idx1++];
+				 System.out.print(two[i][j] + " ");
+			 }
+			 System.out.println();
+		 }
+		 
+	 }
+
+	 public void practice9() { 
 		 
 		 String[] attn = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배", "송성실", "윤예의", "진재주", "차천축", "피퐁표", "홍하하"};
 		 
@@ -201,12 +209,49 @@ public class Array2Practice {
 			 System.out.println();
 		 }
 		 
+		 System.out.print("검색할 학생 이름 입력 : ");
+		 String name = sc.nextLine();
 		 
+		 String part = "없어"; //분단
+		 int row = 0; //행
+		 String col = ""; //열(왼/오)
+		 
+		 for(int i=0; i<one.length; i++) {
+			 for(int j=0; j<one[i].length; j++) {
+				 if(one[i][j].equals(name)) {
+					 part = "1분단";
+					 row = i+1;
+					 if(j == 0) {
+						 col = "왼쪽";
+					 }else {
+						 col = "오른쪽";
+					 }
+				 }//if
+			 }//for
+		 }//for
+		 
+		 for(int i=0; i<two.length; i++) {
+			 for(int j=0; j<two[i].length; j++) {
+				 if(two[i][j].equals(name)) {
+					 part = "2분단";
+					 row = i+1;
+					 if(j == 0) {
+						 col = "왼쪽";
+					 }else {
+						 col = "오른쪽";
+					 }
+				 }//if
+			 }//for
+		 }//for
+		 
+		 if(part.equals("없어")) {
+			 System.out.println("검색하신 학생은 없습니다.");
+		 }else {
+			 System.out.println("검색하신 " + name + " 학생은 " + part + " " + row + "번째 줄 " + col + "에 있습니다.");
+		 }
+			 
 		 
 	 }
 
-	 public void practice9() { //다시
-		 
-	 }
 }
 
