@@ -16,7 +16,7 @@ public class Book {
 		this.discountRate = discountRate;
 		this.author = author;
 	}
-
+ 
 	public String getTitle() {
 		return title;
 	}
