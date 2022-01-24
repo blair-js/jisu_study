@@ -9,12 +9,12 @@ public class NonstaticSample {
 		
 		int[] arr = new int[6];
 		
-		for(int i=0; i<arr.length; i++) {
-			arr[i] = (int)(Math.random()*45 + 1);
+		for(int i=0; i<arr.length; i++) { 
+			arr[i] = (int)(Math.random()*45 + 1); 
 			for(int j=0; j<i; j++) {
 				if(arr[i] == arr[j]) {
 					i--; 
-					continue;
+					break;
 				}
 			}//for
 		}//for
@@ -70,10 +70,12 @@ public class NonstaticSample {
 		// 단, 전달받은 문자열은 반드시 값이 있어야 한다. --> 없으면 null 리턴
 		
 		System.out.print(str + "의 " + index1 + "번 " + index2 + "번 사이의 값 출력 : ");
+		
 		String result = "";
+		
 		if(str != null) {
 			for(int i=index1; i<index2; i++) {
-				result += str.charAt(i);
+				result += str.charAt(i); 
 			}
 			return result;
 		}else {
@@ -81,4 +83,6 @@ public class NonstaticSample {
 		}
 		
 	}
+	
+
 }
