@@ -8,11 +8,11 @@ public class CodeUp {
 
 		/*1001. 
 		Hello 출력*/
-		System.out.println("Hello");
+		//System.out.println("Hello");
 		
 		/*1002.
 		Hello World를 출력한다.*/
-		System.out.println("Hello World");
+		//System.out.println("Hello World");
 		
 		/*1003
 		Hello
@@ -20,40 +20,40 @@ public class CodeUp {
 		(두 줄에 걸쳐 줄을 바꿔 출력)
 		 */
 		//방법1
-		System.out.println("Hello");
-		System.out.println("World");
+		//System.out.println("Hello");
+		//System.out.println("World");
 		//방법2
-		System.out.print("Hello\nWorld");
+		//System.out.print("Hello\nWorld");
 		
 		/*1004
 		 'Hello'
 		를 출력한다.
 		 */
 		//방법1
-		System.out.println("\'Hello\'");
+		//System.out.println("\'Hello\'");
 		//방법2
-		System.out.printf("%s", "'Hello'");
+		//System.out.printf("%s", "'Hello'");
 		
 		/*1005
 		 "Hello World"
 		(단, 큰따옴표도 함께 출력한다.)
 		 */
 		//방법1
-		System.out.println("\"Hello\"");
+		//System.out.println("\"Hello\"");
 		//방법2
-		System.out.printf("%s", "\"Hello\"");
+		//System.out.printf("%s", "\"Hello\"");
 
 		/*1006
 		 "!@#$%^&*()"
 		(단, 큰따옴표도 함께 출력한다.)
 		 */
-		System.out.println("\"!@#$%^&*()\"");
+		//System.out.println("\"!@#$%^&*()\"");
 		
 		/*1007
 		 "C:\Download\hello.cpp"
 		를 출력한다.
 		 */
-		System.out.println("\"C:\\Download\\hello.cpp\"");
+		//System.out.println("\"C:\\Download\\hello.cpp\"");
 	
 		/*1008 => 틀림ㄴ
 	    ┌┬┐
@@ -61,9 +61,9 @@ public class CodeUp {
 		└┴┘
 		를 유니코드를 이용하여 출력한다.
 		 */
-		System.out.printf("\u250C\u252C\u2510\n");
-		System.out.printf("\u251C\u253C\u2524\n");
-		System.out.printf("\u2514\u2534\u2518\n");
+		//System.out.printf("\u250C\u252C\u2510\n");
+		//System.out.printf("\u251C\u253C\u2524\n");
+		//System.out.printf("\u2514\u2534\u2518\n");
 		
 		
 		
@@ -146,6 +146,31 @@ public class CodeUp {
 			}
 		}*/
 		
+		///////////////////////////////////////////////////////////
+		
+		/*1021
+		 입력된 단어를 그대로 출력한다.
+		 */
+		//System.out.println(sc.nextLine());
+		
+		/*1022
+		 공백이 포함되어 있는 한 문장이 입력된다.
+		단, 입력되는 문장은 여러 개의 단어로 구성되고, 엔터로 끝나며,
+		최대 길이는 2000 문자를 넘지 않는다.
+		 */
+		//System.out.println(sc.nextLine());
+		
+		/*1023
+		 실수 1개가 입력된다.
+		(단, 입력값은 절댓값이 10000을 넘지 않으며, 소수점 이하 자릿수는 최대 6자리까지이고
+		0이 아닌 숫자로 시작한다.)
+		 */
+		float f = sc.nextFloat();
+		int mo = (int)f; 
+		float na = f - (int)f;
+		
+		System.out.println(mo);
+		System.out.println(na);
 		
 	}
 
