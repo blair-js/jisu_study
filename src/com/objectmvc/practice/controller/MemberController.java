@@ -21,7 +21,7 @@ public class MemberController {
 	
 	public Member readInfo() {
 	
-		return mem;
+		return mem; 
 		
 	}
 	
@@ -36,6 +36,7 @@ public class MemberController {
 		int age = 2022 - year + 1;
 		
 		return age;
+		
 	}
 	
 	public void updateHeight(double height) {
