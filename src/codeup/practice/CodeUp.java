@@ -1,6 +1,8 @@
 package codeup.practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
 
 public class CodeUp {
 
@@ -165,12 +167,30 @@ public class CodeUp {
 		(단, 입력값은 절댓값이 10000을 넘지 않으며, 소수점 이하 자릿수는 최대 6자리까지이고
 		0이 아닌 숫자로 시작한다.)
 		 */
-		float f = sc.nextFloat();
-		int mo = (int)f; 
-		float na = f - (int)f;
+		/*String str = sc.nextLine();
+		String[] strArr = str.split("\\."); //반드시 \\를 해주어야 점(.)을 인식할 수 있다.
+		for(String s : strArr) {
+			System.out.println(s);
+		}*/
 		
-		System.out.println(mo);
-		System.out.println(na);
+		/*1024
+		단어(영어) 하나를 입력받는다.
+		(단, 단어의 길이는 20자 이하이다.)
+		*/
+		/*String str = sc.nextLine();
+		for(int i=0; i<str.length(); i++) {
+			System.out.println("'" + str.charAt(i) + "'");
+		}*/
+		
+		/*1025
+		 각 자리의 숫자를 분리해 한 줄에 하나씩 [ ]속에 넣어 출력한다.
+		 */
+		int n = sc.nextInt();
+		for(int i=10000; i>0; i/=10) {
+			System.out.println("[" + n/i * i + "]");
+			n %= i;
+		}
+		
 		
 	}
 

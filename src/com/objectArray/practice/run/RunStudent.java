@@ -11,7 +11,7 @@ public class RunStudent {
 		Scanner sc = new Scanner(System.in);
 
 		// 최대 10명의 학생 정보를 기록할 수 있게 배열을 할당한다.
-		Student[] stuArr = new Student[10];
+		Student[] stuArr = new Student[10]; //배열은 크기를 지정하면 다시 바꿀 수 없음 
 		
 		int count = 0; // 학생 수를 나타내는 변수. 한 명 추가 시 1씩 증가시켜줄꺼임
 		
@@ -49,8 +49,8 @@ public class RunStudent {
 		for(int i=0; i<count; i++) {
 			System.out.println(stuArr[i].information());
 		}
-
 		
 	}
+
 
 }

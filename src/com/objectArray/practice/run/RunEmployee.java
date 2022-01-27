@@ -65,7 +65,7 @@ public class RunEmployee {
 			sum += (int)(emp[i].getSalary() + (emp[i].getSalary() * emp[i].getBonusPoint())) * 12;
 		}
 		
-		System.out.println("직원들의 연봉의 평균 : " + sum/3 + "원");
+		System.out.println("직원들의 연봉의 평균 : " + sum/emp.length + "원");
 		
 	}
 
