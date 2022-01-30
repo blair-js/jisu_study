@@ -34,5 +34,5 @@ public class Student extends Person{
 		return super.information() + "[grade=" + grade + ", major=" + major + "]";
 	}
 	
-
+	
 }
