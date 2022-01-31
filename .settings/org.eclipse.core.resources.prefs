@@ -2,3 +2,5 @@ eclipse.preferences.version=1
 encoding//src/com/object/practice/run/BookTest.java=UTF-8
 encoding//src/com/objectArray/practice/run/RunStudent.java=UTF-8
 encoding//src/com/objectmvc/practice/controller/MemberController.java=UTF-8
+encoding//src/com/polymorphism/controller/LibraryManager.java=UTF-8
+encoding//src/com/polymorphism/view/LibraryMenu.java=UTF-8
