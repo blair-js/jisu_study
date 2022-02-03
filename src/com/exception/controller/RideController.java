@@ -41,7 +41,10 @@ public class RideController {
 			
 			// 문제가 발생한 해당 배열의 인덱스 번호가 몇번에서 발생하는지
 			// Throwable클래스의 getMessage()메소드를 통해 출력
-			e.getMessage();
+			String msg = e.getMessage(); //오류 메시지를 얻어옴 
+			//System.out.println(msg); //찍어보면 Index 2 out of bounds for length 2 라고 나옴(문제되는 인덱스가 메시지의 마지막에 나옴)
+			char last = msg.charAt(msg.length()-1); //문자 길이의 마지막 번째를 뽑겠음
+			System.out.println("문제가 발생한 해당 배열의 인덱스 번호 : " + last);
 			
 		}finally {
 			// "인원이 가득 찼습니다. 다음 차례를 기다리세요"
@@ -50,9 +53,7 @@ public class RideController {
 			System.out.println("인원이 가득 찼습니다. 다음 차례를 기다리세요");
 			System.out.println("이번 차례 탑승 명단");
 			for(Guests g : onboard) {
-				if(g != null) {
 					System.out.println(g.toString());
-				}
 			}
 			System.out.println("탑승자 요금 : " + RollerCoaster.PRICE * onboard.length);
 		}
