@@ -4,7 +4,6 @@ import com.arraymvc.model.vo.Member;
 
 public class MemberController {
 
-
 	public static final int SIZE = 10;
 	private int memberCount;
 	private Member[] mem = new Member[SIZE]; 
@@ -25,10 +24,8 @@ public class MemberController {
 	}
 
 	public Member[] getMem() {
-		
 		// mem 林家 蔼 府畔
 		return mem;
-		
 	}
 
 	public Member checkId(String userId) {
@@ -53,6 +50,7 @@ public class MemberController {
 		mem[memberCount] = m;
 		// memberCount 1 刘啊
 		memberCount++;
+		
 	}
 
 	public Member searchMember(int menu, String search) {
@@ -226,9 +224,8 @@ public class MemberController {
 			}//for
 		}//for
 		
-		// copy 林家 蔼 府畔
+		//copy 林家 蔼 府畔
 		return copy;
 	}
-	
 	
 }

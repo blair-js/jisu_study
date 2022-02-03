@@ -8,8 +8,7 @@ public class Run {
 
 		MemberMenu m = new MemberMenu();
 		m.mainMenu();
-		
-		
+		 
 	}
 
 }
