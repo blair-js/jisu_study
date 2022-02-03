@@ -185,12 +185,59 @@ public class CodeUp {
 		/*1025
 		 각 자리의 숫자를 분리해 한 줄에 하나씩 [ ]속에 넣어 출력한다.
 		 */
-		int n = sc.nextInt();
+		/*int n = sc.nextInt();
 		for(int i=10000; i>0; i/=10) {
 			System.out.println("[" + n/i * i + "]");
 			n %= i;
 		}
+		*/
 		
+		/*1026
+		 시 분 초 가
+		 시:분:초 형식으로 입력된다.
+		 분만 출력한다.
+		 */
+		/*String time = sc.nextLine();
+		String[] timeArr = time.split(":");
+		System.out.println(timeArr[1]);*/
+		
+		/*1027
+		 년월일이 '.'(닷)으로 구분되어 입력된다.
+		 년월일을
+		 월년으로 바꾸어 '-'(대쉬, 마이너스)로 구분해 출력한다.
+		 */
+		
+		/*String date = sc.nextLine();
+		String reDate = date.replace('.', '-');
+		System.out.println(reDate);*/
+		
+		/*String date = "2017.1.14";
+		String[] dateArr = date.split("\\.");
+		System.out.printf("%02d-%02d-%04d", Integer.parseInt(dateArr[2]), Integer.parseInt(dateArr[1]), Integer.parseInt(dateArr[0]));*/
+		
+		/*1028
+		 정수 1개가 입력된다.
+		(단, 입력되는 정수의 범위는 0 ~ 4294967295 이다.)
+		입력된 정수를 그대로 출력한다.
+		 */
+		/*long n = sc.nextLong();
+		System.out.println(n);*/
+		
+		/*1029
+		 입력된 실수를 소수점 이하 11자리까지 반올림하여 출력한다.
+		참고
+		%.11lf 를 사용하면 소수점 이하 11자리까지 출력된다.
+		 */
+		/*double f = sc.nextDouble();
+		System.out.printf("%.11f", f);*/
+		
+		/*1030
+		 정수 1개가 입력된다.
+		단, 입력되는 정수의 범위는 -9223372036854775808 ~ +9223372036854775807 이다.
+		입력된 정수를 그대로 출력한다.
+		 */
+		/*long l = sc.nextLong();
+		System.out.println(l);*/
 		
 	}
 
