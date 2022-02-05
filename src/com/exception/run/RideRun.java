@@ -9,7 +9,6 @@ public class RideRun {
 		RideController r = new RideController();
 		r.cutGuests();
 		
-		
 	}
 
 }

@@ -50,14 +50,13 @@ public class RideController {
 			// "인원이 가득 찼습니다. 다음 차례를 기다리세요"
 			// "이번 차례 탑승 명단"
 			// 탑승자 각각의 이름, 키를 출력하고 두 탑승자의 요금합계를 출력 하시오
-			System.out.println("인원이 가득 찼습니다. 다음 차례를 기다리세요");
+			System.out.println("인원이 가득 찼습니다. 다음 차례를 기다리세요"); 
 			System.out.println("이번 차례 탑승 명단");
 			for(Guests g : onboard) {
 					System.out.println(g.toString());
 			}
 			System.out.println("탑승자 요금 : " + RollerCoaster.PRICE * onboard.length);
 		}
-
 		
 	}
 	

@@ -18,7 +18,6 @@ public class Run2 {
 			e.printStackTrace();
 		}
 		
-		
 	}
 	
 	private static void checkNum(int num) throws MyException {
@@ -28,6 +27,7 @@ public class Run2 {
 		}else {
 			System.out.println("10보다 크거나 같은 수 입니다.");
 		}
+		
 	}
 
 }
