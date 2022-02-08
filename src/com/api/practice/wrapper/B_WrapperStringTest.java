@@ -16,7 +16,6 @@ public class B_WrapperStringTest {
 		
 		System.out.println(i+d);
 		
-		
 		//2. 기본자료형 --> String 으로 바꾸기 위해 
 		// 기본자료형 --> Wrapper -->String
 		// 해당Wrapper 클래스.valueOf().toString()

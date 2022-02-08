@@ -14,7 +14,7 @@ public class SetDate {
 		
 		Date d = new Date();
 		//SimpleDateFormat sd = new SimpleDateFormat("yyyy년 MM월 dd일 HH시 mm분 ss초"); //HH => 21시 
-		SimpleDateFormat sd = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초"); //hh => 9시
+		SimpleDateFormat sd = new SimpleDateFormat("yyyy년 MM월 dd일 hh시 mm분 ss초"); //hh => 09시
 		String today = sd.format(d);
 		
 		return today; 

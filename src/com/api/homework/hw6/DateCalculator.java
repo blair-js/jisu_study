@@ -31,7 +31,7 @@ public class DateCalculator {
  		
  		long diffDay = diffSec/86400; //86400은 하루의 총 초 임 (24시간*60분*60초 = 86400초) => 일수를 구하고 싶으니 나눔! (22행에서 1000으로 나눈것처럼)
  		
-		return diffDay;
+		return diffDay; //738193(자바의정석 답..)
 		
 	}
 	

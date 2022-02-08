@@ -8,6 +8,7 @@ public class Run {
 
 		SpaceUpper s = new SpaceUpper();
 		s.spaceToUpper();
+		
 	}
 
 }

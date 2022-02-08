@@ -18,7 +18,7 @@ public class NumberOk {
 		
 		int count = 1; //문제 횟수 카운트
 		ran = (int)(Math.random() * 100 + 1);
-		System.out.println("첫게임" + ran);
+		//System.out.println("첫게임" + ran);
 
 		while(true) {
 			
@@ -47,7 +47,7 @@ public class NumberOk {
 				System.out.println("새로운 게임을 시작합니다!"); //위의 36행 if문을 탄 후 여기로 오게되면
 				count = 1; //새로운 게임을 시작하기 때문에 카운트 다시 1로 변경
 				ran = (int)(Math.random() * 100 + 1); //새로운 게임이니 랜덤값 새로 생성
-				System.out.println("재게임" + ran);
+				//System.out.println("재게임" + ran);
 				continue; //바깥 while 반복하게 되므로 23행으로 감 
 				
 			}else if(answer > ran) {

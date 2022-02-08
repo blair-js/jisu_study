@@ -23,7 +23,6 @@ public class Run {
 		et.printEmp();
 
 		
-		
 	}
 
 }

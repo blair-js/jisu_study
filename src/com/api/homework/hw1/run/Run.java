@@ -8,6 +8,7 @@ public class Run {
 
 		TokenMenu t = new TokenMenu();
 		t.mainMenu();
+		
 	}
 
 }

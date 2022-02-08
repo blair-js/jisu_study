@@ -8,6 +8,7 @@ public class Run {
 
 		NumberOk n = new NumberOk();
 		n.numGame();
+		
 	}
 
 }

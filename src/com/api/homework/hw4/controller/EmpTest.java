@@ -40,7 +40,7 @@ public class EmpTest {
 		
 		for(Employee e : empArr) {
 			if(e != null) {
-				System.out.println(e.toString());
+				System.out.println(e);
 			}
 		}
 		
