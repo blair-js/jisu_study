@@ -46,6 +46,8 @@ public class FileDao {
 				bw = new BufferedWriter(new FileWriter(fileName + ".txt"));
 				
 				bw.write(sb.toString());
+				//bw.append(sb + "\n");
+				
 				//write 메소드의 매개변수로 sb를 넣으니까 자꾸 오류 뜸 
 				//Stringbuilder가 시퀀스형?이라서 인자로 받지 못하는 것이라고 함.
 				//결국 넣으려면 stringbuilder.toString()을 해줘야 한다고 함. => 왜? 왜? 왜? 
@@ -104,36 +106,34 @@ public class FileDao {
 			}
 		}
 
-		
-		
-		
+
 	}
 	
 	public void fileEdit() {
 		
 		StringBuilder sb = new StringBuilder(); 
-		BufferedWriter bw = null;
-		BufferedReader br = null;
-		
+
 		System.out.print("수정 할 파일명 : ");
 		String fileName = sc.nextLine();
 
+		BufferedWriter bw = null;
+		BufferedReader br = null;
+		
 		try {
 			
-			bw = new BufferedWriter(new FileWriter(fileName + ".txt", true));
+			//순서 중요!!!!!!!!!!!!!!
 			br = new BufferedReader(new FileReader(fileName + ".txt"));
+			bw = new BufferedWriter(new FileWriter(fileName + ".txt", true));
 
 			String str = null;
-			
 			while((str = br.readLine()) != null) { //EOF에서 null 반환하므로 파일끝의 전까지만 출력
 				System.out.println(str);
 			}
 			
 			System.out.println("파일에 추가할 내용을 입력하시오 :");
-
 			while(true) {
-				String answer = sc.nextLine();
 				
+				String answer = sc.nextLine();
 				if(!answer.equals("exit")) { //exit가 아니면
 					sb.append(answer); //입력받은 문자열 추가
 				}else { //exit면
@@ -145,8 +145,10 @@ public class FileDao {
 			String save = sc.nextLine();
 			
 			if(save.equalsIgnoreCase("y")) { 
-				bw.write(sb.toString()); //파일에 추가~~~~~~~~ => 왜 안돼? 왜????????????????? 왜!!!!!!!!
+				
+				bw.write(sb.toString()); //파일에 추가~~~~~~~~ => 왜 안돼? 왜????????????????? 왜!!!!!!!!]
 				System.out.println(fileName + ".txt" + " 파일의 내용이 변경되었습니다.");
+			
 			}else { // 입력 받은 값이 y가 아니면 (저장여부에 대해)
 				System.out.println("다시 메뉴로 돌아갑니다.");
 			}
