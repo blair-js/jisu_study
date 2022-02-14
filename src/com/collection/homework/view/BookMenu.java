@@ -6,7 +6,6 @@ import java.util.Scanner;
 import com.collection.homework.controller.BookManager;
 import com.collection.homework.model.vo.Book;
 
-
 public class BookMenu {
 	
 	private Scanner sc = new Scanner(System.in);
