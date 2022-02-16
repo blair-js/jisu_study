@@ -13,6 +13,7 @@ public class Ex14_2 {
 		//generate(Supplier s) : Supplier => 주기만 하는 것 입력x, 출력o
 		Stream<Integer> oneStream = Stream.generate(()->1);
 		oneStream.limit(10).forEach(System.out::println);
+		
 	}
 
 }
