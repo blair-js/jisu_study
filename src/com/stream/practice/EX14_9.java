@@ -1,6 +1,7 @@
 package com.stream.practice;
 
 import java.util.Optional;
+import java.util.stream.IntStream;
 
 public class EX14_9 {
 
@@ -27,6 +28,12 @@ public class EX14_9 {
 		//str = opt.orElse("EMPTY"); //optional에 저장된 값이 null이면 ""반환
 		str = opt.orElseGet(()->new String());
 		System.out.println("str=" + str);
+		
+		IntStream intstream1 = IntStream.range(1, 11);
+	    System.out.println(intstream1.sum());
+	    
+	    int intstream2 = IntStream.range(1, 11).reduce(0, (a,b)-> a+b);
+	    System.out.println(intstream2);
 	}
 
 }
