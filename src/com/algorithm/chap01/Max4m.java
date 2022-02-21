@@ -17,11 +17,12 @@ public class Max4m {
 	
 	public static void main(String[] args) {
 		
-		System.out.println("max3m(3, 2, 1, 4) = " + max4m(3, 2, 1, 4));
-		System.out.println("max3m(3, 2, 2, 4) = " + max4m(3, 2, 2, 4));
-		System.out.println("max3m(3, 1, 2, 4) = " + max4m(3, 1, 2, 4));
-		System.out.println("max3m(3, 2, 3, 4) = " + max4m(3, 2, 3, 4));
-		System.out.println("max3m(2, 1, 3, 4) = " + max4m(2, 1, 3, 4));
+		System.out.println("max4m(3, 2, 1, 4) = " + max4m(3, 2, 1, 4));
+		System.out.println("max4m(3, 2, 2, 4) = " + max4m(3, 2, 2, 4));
+		System.out.println("max4m(4, 1, 2, 3) = " + max4m(4, 1, 2, 3));
+		System.out.println("max4m(3, 2, 3, 4) = " + max4m(3, 2, 3, 4));
+		System.out.println("max4m(2, 4, 3, 1) = " + max4m(2, 1, 3, 4));
+		
 	}
 
 }
