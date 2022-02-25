@@ -6,16 +6,30 @@ public class SeqSearchSen {
 
 	static int seqSearchSen(int[] a, int n, int key) {
 		
-		int i = 0; 
+		//int i = 0; 
 		a[n] = key; //보초 초기화 => 찾고하자는 key 값을 배열 a의 마지막요소로 넣는다. 
 		
-		while(true) {
-			if(a[i] == key) {
-				break;
-			}
-			i++;
-		}
+//		while(true) {
+//			if(a[i] == key) {
+//				break;
+//			}
+//			i++;
+//		}
 		
+		//위의 while문을 for문으로_1
+//		int i;
+//		for(i=0; i<n; i++) {
+//			if(a[i] == key) {
+//				break;
+//			}//if
+//		}
+		
+		//위의 while문을 for문으로_2
+		int i;
+		for(i=0; a[i]!=key; i++) {
+			//아무일도 하지 않고 반복만 함
+		}
+
 		return i==n ? -1 : i; //해당 인덱스 i가 보초의 위치(n)일 때 -1 반환, 아니면 해당 인덱스 반환
 	}
 	
