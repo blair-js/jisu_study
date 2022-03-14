@@ -8,16 +8,16 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		while(true) {
-			int num1 = sc.nextInt();
-			int num2 = sc.nextInt();
-			
-			if(num1 != 0 && num2 != 00) {
-				System.out.println(num1 + num2);
-			}else {
-				break;
-			}
-		}//while
+		int t; 
+		int a, b;
+		
+		t = sc.nextInt();
+		while(t >= 0) {
+			a = sc.nextInt();
+			b = sc.nextInt();
+			System.out.printf("%d\n", a+b);
+			t--;
+		}
 		
 	}
 
