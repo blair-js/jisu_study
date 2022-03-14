@@ -9,14 +9,12 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int t; 
-		int a, b;
-		
 		t = sc.nextInt();
-		while(t >= 0) {
+		while(t-- > 0) {
+			int a, b;
 			a = sc.nextInt();
 			b = sc.nextInt();
-			System.out.printf("%d\n", a+b);
-			t--;
+			System.out.println(a+b);
 		}
 		
 	}
