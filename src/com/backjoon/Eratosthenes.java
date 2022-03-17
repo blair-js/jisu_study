@@ -15,7 +15,7 @@ public class Eratosthenes {
 		for(int i=2; i<=n; i++) {
 			if(check[i] == false) { //지워지지 않았으면 
 				prime[pn++] = i; //소수니까 소수 배열에 저장 
-				for(int j=i*i; j<=n; j+=i) { //i의 배수 지우기 
+				for(int j=i*i; j<=n; j+=i) { //i의 배수 지우기(이 때, i*i는 i+i나 i*2로 적어주는 것이 더 좋다) => 왜냐 i가 백만인 경우 i*i는 1조이다. int의 범위를 넘어간다. 
 					check[j] = true; //해당 i의 배수번째 값 지우기 
 				}
  			}//if
