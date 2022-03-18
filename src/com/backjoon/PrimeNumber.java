@@ -52,8 +52,8 @@ public class PrimeNumber {
 
 		System.out.println("3은 소수 인가? : " + prime1(3));
 		System.out.println("12는 소수 인가? : " + prime2(12));
-		System.out.println("24는 소수 인가? : " + prime2(24));
-		System.out.println("7은 소수 인가? : " + prime2(7));
+		System.out.println("24는 소수 인가? : " + prime3(24));
+		System.out.println("7은 소수 인가? : " + prime3(7));
 	}
 
 }
