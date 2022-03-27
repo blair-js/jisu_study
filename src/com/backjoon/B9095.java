@@ -18,10 +18,10 @@ public class B9095 {
 
 		for(int i=0; i<testCase; i++) { //입력한 테스트케이스 수 만큼 반복
 			
-			int num = sc.nextInt();
+			int num = sc.nextInt(); //1,2,3의 합으로 몇 가지의 경우의 수가 도출되는지 궁금한 수 num을 입력받는다.
 			
-			for(int n=4; n<=num; n++) {
-				dp[n] = dp[n-1] + dp[n-2] + dp[n-3];
+			for(int n=4; n<=num; n++) { //위에서 0,1,2,3에 대한 경우의 수는 이미 도출되었으므로 반복은 4부터 num까지 한다.
+				dp[n] = dp[n-1] + dp[n-2] + dp[n-3]; //메모이제이션 부분
 			}//for
 			
 			System.out.println(dp[num]);
