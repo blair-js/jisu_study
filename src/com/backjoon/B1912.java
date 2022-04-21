@@ -47,7 +47,9 @@ public class B1912 {
 			
 		}
 
+		//오름차순 정렬 후 
 		Arrays.sort(dp);
+		//마지막 인덱스의 값을 뽑으면 된다.
 		System.out.println(dp[n-1]);
 		
 	}
