@@ -19,7 +19,7 @@ public class B11659 {
 		
 		int[] arr = new int[n+1]; //*누적합을 저장할 공간*
 		
-		st = new StringTokenizer(br.readLine()); //5개의 숫자를 토큰으로 구분해서 저장
+		st = new StringTokenizer(br.readLine()); //5개의 숫자를 토큰으로 구분해서 저장 
 		
 		//해당 숫자만큼까지의 합을 누적하는 반복문(위에서 st에 담겨있는 숫자를 차례대로 넣는 것이 아님에 주의!)
 		for(int i=1; i<n+1; i++) { 
