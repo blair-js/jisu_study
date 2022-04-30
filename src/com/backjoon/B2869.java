@@ -21,7 +21,6 @@ public class B2869 {
 		System.out.println((int)Math.ceil((v-b)/(a-b)));*/
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
 		StringTokenizer st = new StringTokenizer(br.readLine()); //문자열로 가져와서 토큰으로 저장
 				
